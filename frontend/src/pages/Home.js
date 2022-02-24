@@ -399,7 +399,7 @@ const Home = ({ movies }) => {
                         </CardActionArea>
                     </Grid>
                 </Grid>
-                <Grid container justifyContent="space-around" backgroundColor="secondary.main">
+                <Grid container justifyContent="space-evenly" backgroundColor="secondary.main">
                     <Grid item component={Card} xs={2} sx={{ alignItems: 'flex-start', mx: 2, my: 3  }}>
                         <CardActionArea onClick={() => {toTravel(movieURL+moviesList[20].id)}}>
                             <CardMedia
@@ -428,8 +428,8 @@ const Home = ({ movies }) => {
                             </CardContent>
                         </CardActionArea>
                     </Grid>
-                    <Grid item xs={2} sx={{ alignItems: 'flex-start', mx: 2, my: 3  }} />
-                    <Grid item xs={2} sx={{ alignItems: 'flex-start', mx: 2, my: 3  }} />
+                    <Grid item xs={2} sx={{  mx: 2, my: 3  }} />
+                    <Grid item xs={2} sx={{  mx: 2, my: 3  }} />
                 </Grid>
             </Container>
         </div>
