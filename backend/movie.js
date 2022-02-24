@@ -47,6 +47,7 @@ router.get('/:movieId', async (req, res) => {
     })
 
     const movieDetails = {};
+    movieDetails.plot = movieInfo.Plot;
     movieDetails.title = movieInfo.Title;
     movieDetails.video = movieVideoId;   
     movieDetails.img = movieInfo.Poster;

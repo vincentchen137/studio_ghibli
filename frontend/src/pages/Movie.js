@@ -57,6 +57,15 @@ const Movie = () => {
             </Container>
             <Container maxWidth="xl">
                 <Grid sx={{ py: 5}} backgroundColor="secondary.main" />
+                <Grid container backgroundColor="secondary.main" justifyContent="center" alignItems="center">
+                    <Grid item align="center" xs={12}>
+                        <Typography align="center" fontSize={18}><strong>Plot: </strong></Typography>
+                        <Typography align="center">{movie.plot}</Typography>
+                    </Grid>
+                </Grid>
+            </Container>
+            <Container maxWidth="xl">
+                <Grid sx={{ py: 3}} backgroundColor="secondary.main" />
                 <Grid container direction="row" backgroundColor="secondary.main" justifyContent="center" alignItems="center">
                     <Grid item xs={6} sx={{ pl: 25 }}>
                         <Typography align="left" sx={{ my: 1}}><strong>IMDB Rating: </strong>{movie.rating}</Typography>
