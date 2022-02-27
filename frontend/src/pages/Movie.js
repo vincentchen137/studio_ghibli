@@ -58,10 +58,12 @@ const Movie = () => {
             <Container maxWidth="xl">
                 <Grid sx={{ py: 3}} backgroundColor="secondary.main" />
                 <Grid container backgroundColor="secondary.main" justifyContent="center" alignItems="center">
-                    <Grid item align="center" xs={12}>
+                    <Grid item xs={2} />
+                    <Grid item align="center" xs={8}>
                         <Typography align="center" fontSize={18}><strong>Plot: </strong></Typography>
                         <Typography align="center">{movie.plot}</Typography>
                     </Grid>
+                    <Grid item xs={2} />
                 </Grid>
             </Container>
             <Container maxWidth="xl">
