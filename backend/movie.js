@@ -1,32 +1,13 @@
 const router = require('express').Router();
 const fetch = require('node-fetch');
 
-const OMDB_API_KEY = "&apikey=9286c09c";
-// const YT_API_KEY = "&key=AIzaSyDqJop-Gi0SFt3nGtAq3K9kff9MVJetg5A";
-// const YT_API_KEY = "&key=AIzaSyDOtjy0XbEWXiuRb6h36IM_vE9kAmzFSp0";
-const YT_API_KEY = "&key=AIzaSyBnaPny61PmHNNhIzPCCT7Emb_JLOUhZDQ";
+require('dotenv').config();
+const OMDB_API_KEY = process.env.OMDB_API_KEY;
+const YT_API_KEY = process.env.YT_API_KEY;
 const omdbAPI = "https://www.omdbapi.com/?i=";
 const ytAPI = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=2&order=relevance&q="
 
 router.get('/:movieId', async (req, res) => {
-    // const apiMovie = (id) => {
-    //     await fetch("https://www.omdbapi.com/?i=" + id + apiKey, {
-    //         method: 'GET'
-    //     }).then(response => {return response.json()
-    //     }).then(data => {
-    //         // setMovie(data);
-    //         // console.log(movie);
-    //         console.log(data);
-    //     })
-    // }
-    // apiMovie(req.movieId);
-
-    // const response = await fetch(apiURL+req.params.movieId+OMDB_API_KEY, {
-    //     method: "GET"})
-    // .then(res => res.json())
-    // .catch(()=> {
-    //     console.error('Fetch failed');
-    // });
 
     let movieInfo, temp, movieTitle, movieVideoId;
 
